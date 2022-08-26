@@ -5,11 +5,9 @@ import "./App.css";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import AuthProvider from "./Authentication/AuthProvider";
-import AboutMe from "./Pages/AboutMe";
 import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
 import Footer from "./Components/Footer";
-import RequireAuth from "./Authentication/RequireAuth";
 
 function App() {
   return (
@@ -18,14 +16,6 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/about-me"
-            element={
-              <RequireAuth>
-                <AboutMe />
-              </RequireAuth>
-            }
-          />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
         </Routes>

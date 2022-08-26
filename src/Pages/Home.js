@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useAuth from "../Hook/useAuth";
 import avatar from "../Images/user.png";
 
@@ -30,15 +29,16 @@ const Home = () => {
                     width="62px"
                   />
                 )}
-                {/* <p className="mt-4 text-muted">
-                  If you update your profile? please go{" "}
-                  <span>
-                    <Link to="/about-me" style={{ textDecoration: "none" }}>
-                      About Me
-                    </Link>
-                  </span>{" "}
-                  page
-                </p> */}
+              </div>
+              <div className="card border-0 shadow mt-4 p-4">
+                <div className="d-flex justify-content-evenly">
+                  <p className="fw-bold">Your email:</p>
+                  <p>{loggedInUser.email}</p>
+                </div>
+                <div className="d-flex justify-content-evenly">
+                  <p className="fw-bold">Creation Time:</p>
+                  <p>{loggedInUser.metadata?.creationTime}</p>
+                </div>
               </div>
             </div>
           </div>
